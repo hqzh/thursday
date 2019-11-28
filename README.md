@@ -339,7 +339,7 @@ module.exports = {
 
 VSCode安装完成Vetur和 ESLint 后，文件 > 首选项 > 设置 打开 VSCode 配置文件,添加如下配置
 
-```
+```js
 {
   "eslint.enable": false, // 是否开启检测
   "eslint.validate": [
@@ -364,7 +364,7 @@ VSCode安装完成Vetur和 ESLint 后，文件 > 首选项 > 设置 打开 VSCod
   "eslint.run": "onSave",
   "eslint.autoFixOnSave": false, // 保存时是否根据eslint规则自动修复
 }
-```js
+```
 
 如果不行，试试这个
 
