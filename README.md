@@ -17,7 +17,7 @@
 
 ```js
     npm install eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-vue eslint-friendly-formatter eslint-loader babel-eslint  --save-dev
-    npm i -g eslint-plugin-vue
+    // npm i -g eslint-plugin-vue
 ```
 
 2. 添加eslit配置文件
