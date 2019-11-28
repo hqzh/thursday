@@ -157,7 +157,7 @@ var _vuex = __webpack_require__(/*! vuex */ 18); //
 //
 //
 //
-var company = function company() {return __webpack_require__.e(/*! import() | pages/main/company */ "pages/main/company").then(__webpack_require__.bind(null, /*! ./company.vue */ 93));};var admin = function admin() {return __webpack_require__.e(/*! import() | pages/main/admin */ "pages/main/admin").then(__webpack_require__.bind(null, /*! ./admin.vue */ 96));};var _default = { components: { company: company, admin: admin }, computed: (0, _vuex.mapState)(['hasLogin', 'username', 'userInfo']), onLoad: function onLoad() {console.log(this.userInfo);if (!this.hasLogin) {uni.showModal({ title: '未登录', content: '您未登录，需要登录后才能继续', showCancel: false,
+var company = function company() {return __webpack_require__.e(/*! import() | pages/main/company */ "pages/main/company").then(__webpack_require__.bind(null, /*! ./company.vue */ 93));};var admin = function admin() {return __webpack_require__.e(/*! import() | pages/main/admin */ "pages/main/admin").then(__webpack_require__.bind(null, /*! ./admin.vue */ 98));};var _default = { components: { company: company, admin: admin }, computed: (0, _vuex.mapState)(['hasLogin', 'username', 'userInfo']), onLoad: function onLoad() {console.log(this.userInfo);if (!this.hasLogin) {uni.showModal({ title: '未登录', content: '您未登录，需要登录后才能继续', showCancel: false,
         success: function success(res) {
           if (res.confirm) {
             uni.navigateTo({

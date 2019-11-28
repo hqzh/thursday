@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "企业管理",
+  "component": true,
   "usingComponents": {
     "company-ws-load-more-list": "/pages/admin/company-ws-load-more-list",
     "ws-load-more": "/components/wsure-load-more/load-more"

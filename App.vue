@@ -82,7 +82,7 @@
 		height: 100vh;
 	}
 	.card-wrap{
-		flex:1
+		flex:1,
 	}
 	.card-item{
 		display: flex;

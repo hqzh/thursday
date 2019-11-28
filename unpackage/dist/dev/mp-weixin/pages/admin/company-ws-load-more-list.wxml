@@ -1,0 +1,1 @@
+<block wx:for="{{items}}" wx:for-item="item" wx:for-index="__i0__" wx:key="id"><view class="card item"><view class="card-item">{{item.name}}</view><view class="card-item"><text>{{"车辆数："+item.vehicleCount}}</text><text>{{"联系人："+(item.contact||"")}}</text></view></view></block>

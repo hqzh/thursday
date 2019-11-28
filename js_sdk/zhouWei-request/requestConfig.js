@@ -1,5 +1,5 @@
 import request from "./request";
-let baseUrl = "";
+let baseUrl = "https://its.sutpc.com/vehicle/api/";
 //可以new多个request来支持多个域名请求
 let $http = new request({
 	//接口请求地址

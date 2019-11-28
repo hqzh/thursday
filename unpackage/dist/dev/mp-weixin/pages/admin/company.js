@@ -138,35 +138,61 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _initDict = _interopRequireDefault(__webpack_require__(/*! @/mixins/initDict */ 51));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var _default =
+
+
+
+
+var _initDict = _interopRequireDefault(__webpack_require__(/*! @/mixins/initDict */ 51));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var wsLoadMore = function wsLoadMore() {return __webpack_require__.e(/*! import() | components/wsure-load-more/load-more */ "components/wsure-load-more/load-more").then(__webpack_require__.bind(null, /*! @/components/wsure-load-more/load-more.vue */ 103));};var _default =
+
 {
   mixins: [_initDict.default],
+  components: {
+    wsLoadMore: wsLoadMore },
+
   data: function data() {
     return {
-      cardData: [] };
+      keyword: " " };
 
   },
   onLoad: function onLoad() {
     // this.getDictMap(
     // 	'company_operation_status,company_department,company_scale,company_certification_status,company_dt_compliance_status,company_tt_compliance_status,gender,company_association_duty,company_business_scope,company_association_qualifications'
     // )
-    this.fetch();
+    this.$refs.loadMore.reLoadData();
   },
   methods: {
     onSearch: function onSearch(event) {
-      this.fetch({
-        keyword: event.detail });
-
+      this.keyword = event.detail;
+      this.$refs.loadMore.reLoadData();
     },
     fetch: function () {var _fetch = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var payload,res,_args = arguments;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:payload = _args.length > 0 && _args[0] !== undefined ? _args[0] : {};_context.next = 3;return (
                   this.$http.post('companyInfo/get', _objectSpread({
                     pageOffset: 0,
                     pageSize: 10,
                     sortDirect: "DESC",
-                    sortField: "modifyTime" },
-                  payload)));case 3:res = _context.sent;
+                    sortField: "modifyTime",
+                    keyword: this.keyword },
+                  payload)));case 3:res = _context.sent;return _context.abrupt("return",
 
-                this.cardData = res.data.content;case 5:case "end":return _context.stop();}}}, _callee, this);}));function fetch() {return _fetch.apply(this, arguments);}return fetch;}() } };exports.default = _default;
+                res.data.content);case 5:case "end":return _context.stop();}}}, _callee, this);}));function fetch() {return _fetch.apply(this, arguments);}return fetch;}(),
+
+    provider: function () {var _provider = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(e) {var pageSize, pageNo, res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+                console.log(e);
+
+                pageSize =
+
+                e.pageSize, pageNo = e.pageNo;_context2.next = 4;return (
+                  this.fetch({
+                    pageOffset: pageNo - 1,
+                    pageSize: pageSize }));case 4:res = _context2.sent;
+
+                this.$refs.loadMore.pushData(res);case 6:case "end":return _context2.stop();}}}, _callee2, this);}));function provider(_x) {return _provider.apply(this, arguments);}return provider;}(),
+
+
+    onReachBottom: function onReachBottom() {
+      console.log("onReachBottom");
+      this.$refs.loadMore.reachBottom();
+    } } };exports.default = _default;
 
 /***/ }),
 

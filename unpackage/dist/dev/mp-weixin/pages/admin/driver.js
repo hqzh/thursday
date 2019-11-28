@@ -120,7 +120,8 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 28));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var zTable = function zTable() {return __webpack_require__.e(/*! import() | components/z-table/z-table */ "components/z-table/z-table").then(__webpack_require__.bind(null, /*! @/components/z-table/z-table.vue */ 101));};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 28));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var zTable = function zTable() {return __webpack_require__.e(/*! import() | components/z-table/z-table */ "components/z-table/z-table").then(__webpack_require__.bind(null, /*! @/components/z-table/z-table.vue */ 110));};var _default =
+
 
 
 
@@ -138,8 +139,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       drivers: [],
       id: '',
       keyword: '',
-      columns: [
-      {
+      columns: [{
         title: '序号',
         key: 'index' },
       {
@@ -164,17 +164,25 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   },
   methods: {
     onSearch: function onSearch(event) {
-      this.fetch({ keyword: event.detail });
+      this.fetch({
+        keyword: event.detail });
+
     },
     tableSelect: function tableSelect(val) {
       console.log(val);
     },
     fetch: function () {var _fetch = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var params,id,$http,res,_args = arguments;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:params = _args.length > 0 && _args[0] !== undefined ? _args[0] : {};
-                id = this.id, $http = this.$http;_context.next = 4;return (
-                  $http.post("drivingLicenseInfo/get", _objectSpread({ pageOffset: 0,
+
+                id =
+
+                this.id, $http = this.$http;_context.next = 4;return (
+                  $http.post("drivingLicenseInfo/get", _objectSpread({
+                    pageOffset: 0,
                     pageSize: 100,
                     sortDirect: "DESC",
-                    sortField: "updateTime" }, params)));case 4:res = _context.sent;
+                    sortField: "updateTime" },
+                  params)));case 4:res = _context.sent;
+
                 this.drivers = res.data.content;case 6:case "end":return _context.stop();}}}, _callee, this);}));function fetch() {return _fetch.apply(this, arguments);}return fetch;}() } };exports.default = _default;
 
 /***/ })
