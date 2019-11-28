@@ -1,0 +1,386 @@
+.navigator-hover {
+  background: transparent;
+  opacity: 1;
+}
+.z-table .sort .up-arrow, .z-table .sort .up-arrow.action, .z-table .sort .down-arrow, .z-table .sort .down-arrow.action {
+  content: '';
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+._a {
+  text-decoration: none;
+}
+.z-table {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  min-height: 130rpx;
+  width: 100%;
+  background: #fff;
+  border: solid 2rpx #ccc;
+  font-size: 24rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+.z-table .z-table-main {
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.z-table .z-table-container {
+    height: 100%;
+    overflow: scroll;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.z-table .z-table-pack {
+    position: relative;
+    min-height: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.z-table .z-table-title {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 64rpx;
+    z-index: 1;
+}
+.z-table .z-table-title .z-table-title-item {
+      border-bottom: solid 1rpx #dbdbdb;
+      background: #f8f8f8;
+}
+.z-table .z-table-title .z-table-stick-side {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      left: 0;
+      border-right: solid 1rpx #dbdbdb;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+.z-table .table-container-box.short-table {
+    padding-bottom: 48rpx;
+}
+.z-table .z-table-title,
+  .z-table .z-table-container-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    white-space: nowrap;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.z-table .z-table-title .z-table-title-item,
+    .z-table .z-table-title .z-table-container-col,
+    .z-table .z-table-container-row .z-table-title-item,
+    .z-table .z-table-container-row .z-table-container-col {
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+      white-space: nowrap;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      padding: 0 16rpx;
+      height: 64rpx;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      line-height: 64rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+.z-table .z-table-container-row {
+    z-index: 0;
+    border-bottom: solid 1rpx #f4f4f4;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.z-table .z-table-stick-side {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    background: #f7f9ff;
+    border-right: solid 1rpx #dbdbdb;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.z-table .z-table-bottom {
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background: #4298f7 !important;
+    color: #fff !important;
+    white-space: nowrap;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.z-table .z-table-bottom.long-table {
+      position: -webkit-sticky;
+      position: sticky;
+}
+.z-table .z-table-bottom .z-table-stick-side {
+      background: #4298f7 !important;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+.z-table .z-table-bottom .z-table-bottom-col {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-align: center;
+      padding: 16rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+.z-table .z-table-bottom .z-table-bottom-text {
+      line-height: 100%;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+.z-table .z-table-bottom .z-table-bottom-text-title {
+      margin-bottom: 10rpx;
+      font-size: 22rpx;
+      color: #aad0ff;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+.z-table .z-table-bottom .sum {
+      margin-left: 14rpx;
+      font-size: 28rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+.z-table .table-empty {
+    position: absolute;
+    top: 64rpx;
+    height: 64rpx;
+    line-height: 64rpx;
+    width: 100%;
+    text-align: center;
+}
+.z-table .sort {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 5rpx;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.z-table .sort .up-arrow {
+      border-bottom: 10rpx solid #ccc;
+      border-left: 10rpx dashed transparent;
+      border-right: 10rpx dashed transparent;
+      border-top: 0;
+      display: block;
+      margin-bottom: 5rpx;
+}
+.z-table .sort .up-arrow.action {
+        border-bottom: 10rpx solid #4298f7;
+        border-left: 10rpx dashed transparent;
+        border-right: 10rpx dashed transparent;
+        border-top: 0;
+}
+.z-table .sort .down-arrow {
+      border-top: 10rpx solid #ccc;
+      border-left: 10rpx dashed transparent;
+      border-right: 10rpx dashed transparent;
+      border-bottom: 0;
+      display: block;
+}
+.z-table .sort .down-arrow.action {
+        border-top: 10rpx solid #4298f7;
+        border-left: 10rpx dashed transparent;
+        border-right: 10rpx dashed transparent;
+        border-bottom: 0;
+}
+.z-table .z-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.z-table .z-loading.ztableLoading {
+      opacity: 1;
+}
+.z-table .z-loading .z-loading-animate {
+      position: relative;
+      display: inline-block;
+      width: 30rpx;
+      height: 30rpx;
+      margin-right: 20rpx;
+      border-radius: 100%;
+      border: solid 6rpx #ccc;
+      vertical-align: middle;
+      -webkit-animation: rotate 1s ease-in-out infinite;
+              animation: rotate 1s ease-in-out infinite;
+}
+.z-table .z-loading .z-loading-animate::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -10rpx;
+        z-index: 1;
+        background: #fff;
+        width: 20rpx;
+        height: 20rpx;
+        border-radius: 10rpx;
+}
+@-webkit-keyframes rotate {
+from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+}
+@keyframes rotate {
+from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+}
+.z-table .select-box {
+    display: inline-block;
+    width: 26rpx;
+    height: 26rpx;
+    line-height: 14rpx;
+    margin-right: 15rpx;
+    border: solid 2rpx #4298f7;
+    border-radius: 4rpx;
+    background: #fff;
+    text-align: center;
+}
+.z-table .select-tip {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.z-table .select-tip.selected {
+      position: relative;
+      top: 4rpx;
+      left: -4rpx;
+      height: 4rpx;
+      background: #4298f7;
+      width: 10rpx;
+      opacity: 1;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+}
+.z-table .select-tip.selected:before, .z-table .select-tip.selected:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 4rpx;
+        background: #4298f7;
+}
+.z-table .select-tip.selected:before {
+        bottom: -2rpx;
+        left: -4rpx;
+        width: 8rpx;
+        -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+}
+.z-table .select-tip.selected:after {
+        bottom: 16rpx;
+        right: -16rpx;
+        width: 34rpx;
+        -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+}
+.z-table .z-table-col-text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+}
+.z-table .z-table-col-text.text-center {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+}
+.z-table .z-table-col-text.text-right {
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+}
+

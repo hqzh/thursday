@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "驾驶员管理",
+  "usingComponents": {
+    "z-table": "/components/z-table/z-table"
+  }
+}

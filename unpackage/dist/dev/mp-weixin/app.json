@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/main/index",
+    "pages/admin/company",
+    "pages/admin/vehicle",
+    "pages/admin/driver",
+    "pages/reg/reg",
+    "pages/pwd/pwd",
+    "pages/user/user"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#0faeff",
+    "backgroundColor": "#fbf9fe"
+  },
+  "tabBar": {
+    "color": "#7a7e83",
+    "selectedColor": "#0faeff",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/main/index",
+        "text": "首页",
+        "iconPath": "static/img/home.png",
+        "selectedIconPath": "static/img/homeHL.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "static/img/user.png",
+        "selectedIconPath": "static/img/userHL.png"
+      }
+    ]
+  },
+  "permission": {},
+  "usingComponents": {
+    "van-search": "/wxcomponents/vant-weapp/search/index",
+    "van-field": "/wxcomponents/vant-weapp/field/index",
+    "van-cell-group": "/wxcomponents/vant-weapp/cell-group/index",
+    "van-button": "/wxcomponents/vant-weapp/button/index",
+    "van-cell": "/wxcomponents/vant-weapp/cell/index",
+    "van-grid": "/wxcomponents/vant-weapp/grid/index",
+    "van-grid-item": "/wxcomponents/vant-weapp/grid-item/index",
+    "van-popup": "/wxcomponents/vant-weapp/popup/index",
+    "van-image": "/wxcomponents/vant-weapp/image/index"
+  },
+  "sitemapLocation": "sitemap0.json"
+}
