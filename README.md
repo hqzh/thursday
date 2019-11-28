@@ -16,7 +16,7 @@
 1. 安装依赖：
 
 ```js
-    npm install eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-vue --save-dev
+    npm install eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-vue eslint-friendly-formatter eslint-loader babel-eslint  --save-dev
     npm i -g eslint-plugin-vue
 ```
 
