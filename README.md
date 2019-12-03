@@ -241,7 +241,8 @@ module.exports = {
         }], // 强制在大括号中使用一致的空格
         'array-bracket-spacing': [2, 'never'], // 强制数组方括号中使用一致的空格
         "no-underscore-dangle": ["error", { "allow": ["__VUE_DEVTOOLS_GLOBAL_HOOK__"] }],  // 允许指定标识符使用悬空下划线
-        "max-len": ["error", { "code": 160 }]  //每行支持长度
+        "max-len": ["error", { "code": 160 }],  //每行支持长度
+        "prefer-destructuring": ["error", {"object": true, "array": false}] //强制对象解构，不强制数组解构：
     },
     globals: {  // 设置全局变量忽略eslint检测
         _: true,
