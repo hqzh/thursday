@@ -365,6 +365,15 @@ VSCode安装完成Vetur和 ESLint 后，文件 > 首选项 > 设置 打开 VSCod
   ],
   "eslint.run": "onSave",
   "eslint.autoFixOnSave": false, // 保存时是否根据eslint规则自动修复
+  "editor.formatOnSave": true， // 保存自动格式化（可选，如果不喜欢工具自动格式化，可以用手动使用快捷键格式化之后再手动保存）
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },  // 排除js文件的自动格式化（避免与eslint自动修复冲突）（与上一配置配合使用）
+  // markdownlint配置（可选）
+  "markdownlint.config": {
+    "MD029": false // fix this: https://github.com/DavidAnson/markdownlint/issues/45
+  },
+  "prettier.singleQuote": true, // js中使用单引号（必选）
 }
 ```
 
