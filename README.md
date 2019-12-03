@@ -339,7 +339,7 @@ module.exports = {
 
 5. 辅助的开发工具配置
 
-VSCode安装完成Vetur和 ESLint 后，文件 > 首选项 > 设置 打开 VSCode 配置文件,添加如下配置
+VSCode安装完成Vetur、EditorConfig（帮助开发人员在不同编辑器之间定义和维护一致的编码格式）、 prettier（代码格式化工具） 和 ESLint 后，文件 > 首选项 > 设置 打开 VSCode 配置文件,添加如下配置
 
 ```js
 {
@@ -390,7 +390,23 @@ VSCode安装完成Vetur和 ESLint 后，文件 > 首选项 > 设置 打开 VSCod
 ],
 ```
 
-最后推荐一些[vscode插件](https://github.com/varHarrie/varharrie.github.io/issues/10)
+推荐一些[vscode插件](https://github.com/varHarrie/varharrie.github.io/issues/10)
 
+6. 在根目录下增加.editorconfig文件，写入以下内容
+```
+    # https://editorconfig.org
+    root = true
+
+    # 格式规范，请直接复制使用，勿修改。
+    [*]
+    charset = utf-8
+    end_of_line = lf
+    indent_size = 4
+    indent_style = space
+    insert_final_newline = true
+    max_line_length = 160
+    tab_width = 2
+    trim_trailing_whitespace = true
+```
 
 # end
