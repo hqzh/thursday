@@ -392,21 +392,28 @@ VSCode安装完成Vetur、EditorConfig（帮助开发人员在不同编辑器之
 
 推荐一些[vscode插件](https://github.com/varHarrie/varharrie.github.io/issues/10)
 
-6. 在根目录下增加.editorconfig文件，写入以下内容
+6. 在根目录下增加.editorconfig文件，写入以下内容（[说明](https://blog.csdn.net/Gabriel_wei/article/details/90286668)）
 ```
-    # https://editorconfig.org
-    root = true
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
 
-    # 格式规范，请直接复制使用，勿修改。
-    [*]
-    charset = utf-8
-    end_of_line = lf
-    indent_size = 4
-    indent_style = space
-    insert_final_newline = true
-    max_line_length = 160
-    tab_width = 2
-    trim_trailing_whitespace = true
+root = true
+
+[*]
+
+# Change these settings to your own preference
+indent_style = space
+indent_size = 4
+
+# We recommend you to keep these unchanged
+end_of_line = crlf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
 ```
 
 # end
