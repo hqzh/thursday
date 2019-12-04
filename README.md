@@ -374,6 +374,10 @@ VSCode安装完成Vetur、EditorConfig（帮助开发人员在不同编辑器之
     "MD029": false // fix this: https://github.com/DavidAnson/markdownlint/issues/45
   },
   "prettier.singleQuote": true, // js中使用单引号（必选）
+  "prettier.disableLanguages": [ //实践中有遇到组件属性值过长会换行，解决这个问题
+        "vue"
+    ],
+   "vetur.format.defaultFormatter.html": "js-beautify-html",
 }
 ```
 
