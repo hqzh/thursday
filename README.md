@@ -43,7 +43,7 @@ module.exports = {
     plugins: [
         "vue"
     ],
-    extends: ['airbnb-base','plugin:vue/recommended', 'eslint:recommended'], // 最严格模式，会在命令窗口打印错误提示
+    extends: ['plugin:vue/recommended', 'eslint:recommended'], // 最严格模式，会在命令窗口打印错误提示
     // 解决webpack配置eslint使用airbnb-base报import/no-unresolved错误
     settings: {
         'import/resolver': {
