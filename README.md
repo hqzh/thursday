@@ -59,8 +59,8 @@ module.exports = {
     // 官网文档 https://eslint.org/docs/user-guide/getting-started
     // 中文文档 https://cn.eslint.org/docs/rules/
     rules: {
-        "vue/max-attributes-per-line": [2, {
-            "singleline": 10,
+        "vue/max-attributes-per-line": ["error", {
+            "singleline": 3,  //设置超过三个属性换行
             "multiline": {
                 "max": 1,
                 "allowFirstLine": false
@@ -379,7 +379,6 @@ VSCode安装完成Vetur、EditorConfig（帮助开发人员在不同编辑器之
     ],
    "vetur.format.defaultFormatterOptions": {
         "prettyhtml": {
-            // 单行超过160个长度的时候开始换行显示各种参数和事件
             "printWidth": 160
         }
     },
