@@ -60,7 +60,7 @@ module.exports = {
     // 中文文档 https://cn.eslint.org/docs/rules/
     rules: {
         "vue/max-attributes-per-line": ["error", {
-            "singleline": 3,  //设置超过三个属性换行
+            "singleline": 5,  //设置超过5个属性换行
             "multiline": {
                 "max": 1,
                 "allowFirstLine": false
